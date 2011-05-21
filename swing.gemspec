@@ -4,8 +4,9 @@
 Gem::Specification.new do |gem|
   gem.name        = "swing"
   gem.version     = File.open('VERSION').read.strip # = ::Swing::VERSION # - conflicts with Bundler
-  gem.summary     = "FIXME: New project swing"
-  gem.description = "FIXME: New project swing"
+  gem.summary     = "Straightforward wrappers for javax.swing Components"
+  gem.description = "Straightforward wrappers for javax.swing Components that simplify Swing code in
+JRuby-based GUI applications"
   gem.authors     = ["arvicco"]
   gem.email       = "arvitallian@gmail.com"
   gem.homepage    = "http://github.com/arvicco/swing"
