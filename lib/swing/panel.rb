@@ -1,21 +1,17 @@
 require 'swing/attr_setter'
 
-module Clients
+module Swing
 
-  # Swing-based GUI controls
-  module Swing
+  class Panel < javax.swing.JPanel
+    include AttrSetter
 
-    class Panel < javax.swing.JPanel
-      include AttrSetter
+    attr_setter :layout, :background
 
-      attr_setter :layout, :background
+    def initialize opts = {}
+      set_attributes(opts) { super() }
 
-      def initialize opts = {}
-        set_attributes(opts) {super()}
+      opts[:parent].add self if opts[:parent]
+    end
+  end # class Panel
 
-        opts[:parent].add self if opts[:parent]
-      end
-    end # class Panel
-
-  end
 end
