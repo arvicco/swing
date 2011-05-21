@@ -2,7 +2,7 @@ include Java
 
 module Clients
 
-  module SwingGui
+  module Swing
     # Class that implements ActionListener interface around a given block
     class ActionListener
       java_implements java.awt.event.ActionListener

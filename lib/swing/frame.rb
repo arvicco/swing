@@ -5,7 +5,7 @@ import javax.swing.JFrame
 module Clients
 
   # Swing-based GUI controls
-  module SwingGui
+  module Swing
 
     class Frame < JFrame
       include AttrSetter

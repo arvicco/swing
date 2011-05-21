@@ -3,7 +3,7 @@ require 'swing/attr_setter'
 module Clients
 
   # Swing-based GUI controls
-  module SwingGui
+  module Swing
 
     class Panel < javax.swing.JPanel
       include AttrSetter

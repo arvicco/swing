@@ -3,7 +3,7 @@ require 'swing/attr_setter'
 module Clients
 
   # Swing-based GUI controls
-  module SwingGui
+  module Swing
 
     # Scroll Pane around given scrollable component
     class ScrollPane < javax.swing.JScrollPane

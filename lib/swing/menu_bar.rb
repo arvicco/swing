@@ -1,10 +1,9 @@
-require 'swing/action_listener'
+require 'swing/menu'
+require 'swing/menu_item'
 require 'swing/attr_setter'
 
 module Clients
-
-  # Swing-based Menu elements
-  module SwingGui
+  module Swing
 
     class MenuBar < javax.swing.JMenuBar
       include AttrSetter
@@ -28,25 +27,6 @@ module Clients
           end
         end
         opts[:parent].setJMenuBar self if opts[:parent]
-      end
-    end
-
-    class Menu < javax.swing.JMenu
-      include AttrSetter
-
-      def initialize text, opts = {}
-        set_attributes(opts) { super text }
-        opts[:parent].add self if opts[:parent]
-      end
-    end
-
-    class MenuItem < javax.swing.JMenuItem
-      include AttrSetter
-
-      def initialize text, opts = {}, &block
-        set_attributes(opts) { super text }
-        self.addActionListener ActionListener.new &block
-        opts[:parent].add self if opts[:parent]
       end
     end
 

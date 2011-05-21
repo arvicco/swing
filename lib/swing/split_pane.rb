@@ -4,7 +4,7 @@ import javax.swing.JSplitPane
 module Clients
 
   # Swing-based GUI controls
-  module SwingGui
+  module Swing
 
     class SplitPane < JSplitPane
       include AttrSetter
