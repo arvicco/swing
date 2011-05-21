@@ -17,14 +17,7 @@
 
 source :gemcutter
 
-group :cucumber do
-  gem 'cucumber'
-  gem 'rspec', '~>2.0.0', require: ['rspec/expectations', 'rspec/stubs/cucumber']
-  # add more here...
-end
-
 group :test do # Group for testing code on Windows (win, win_gui)
-  gem 'rspec', '~>2.0.0', require: ['rspec', 'rspec/autorun']
-  gem 'amqp-spec', '>=0.1.8', git: 'git://github.com/arvicco/amqp-spec.git', require: 'amqp-spec/rspec'
+  gem 'rspec', '~>2.6.0', :require => ['rspec', 'rspec/autorun']
 end
 

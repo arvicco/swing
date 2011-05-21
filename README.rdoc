@@ -4,11 +4,18 @@ url: http://github.com/arvicco/swing
 
 == DESCRIPTION:
 
-FIXME (describe your package)
+Straightforward wrappers for javax.swing Components that simplify Swing code in
+JRuby-based GUI applications.
 
 == FEATURES/PROBLEMS:
 
-* FIXME (list of features or problems)
+* Library defines Ruby wrapper classes for Swing components that do NOT shadow original
+  javax.swing classes. So, javax.swing.JButton class is wrapped by Swing::Button class,
+  and you need to <b> require 'swing/button' </b> to use it.
+* Ruby wrappers define properties that are settable in constructor options, as well
+  as (optional) defaults for them that may be different from swing's original defaults:
+  Swing::Button.new 'Title', :enabled => false
+*
 
 == SYNOPSIS:
 
@@ -21,7 +28,7 @@ FIXME (describe your package)
 == INSTALL:
 
   $ sudo gem install swing
-* FIXME anything else?
 
 == LICENSE:
-Copyright (c) 2010 Arvicco. See LICENSE for details.
+
+Copyright (c) 2011 Arvicco. See LICENSE for details.
