@@ -18,6 +18,7 @@ coverage
 rdoc
 pkg
 log
+.iml
 .idea
 .bundle
 

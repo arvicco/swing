@@ -17,3 +17,7 @@
 == 0.0.4 / 2011-05-24
 
 * Fixed bug that prevented setting attributes to false
+
+== 0.0.5 / 2011-05-24
+
+* Ignoring IDEA module info
