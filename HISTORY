@@ -13,3 +13,7 @@
 == 0.0.3 / 2011-05-21
 
 * Getting rid of extra namespace
+
+== 0.0.4 / 2011-05-24
+
+* Fixed bug that prevented setting attributes to false

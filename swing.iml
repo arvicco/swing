@@ -1,10 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <module type="RUBY_MODULE" version="4">
+  <component name="GemRequirementsHolder" version="3">
+    <requirement>
+      <requirement>
+        <dependency name="rspec" version="0" bound="GREATER_OR_EQUAL" lib="['rspec', 'rspec/autorun']" git="false" path="false" doRequire="true" />
+      </requirement>
+      <source from="swing/Gemfile" />
+    </requirement>
+  </component>
   <component name="NewModuleRootManager" inherit-compiler-output="true">
     <exclude-output />
     <content url="file://$MODULE_DIR$" />
-    <orderEntry type="jdk" jdkName="JRuby SDK 1.6.1-p330 [global]" jdkType="JRUBY_SDK" />
+    <orderEntry type="jdk" jdkName="JRuby SDK 1.6.1-p330" jdkType="JRUBY_SDK" />
     <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="library" scope="PROVIDED" name="[gem] bundler (v1.0.13, /Users/vb/.rvm/gems/jruby-1.6.1/gems/bundler-1.0.13)" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="[gem] rspec (v2.6.0, /Users/vb/.rvm/gems/jruby-1.6.1/gems/rspec-2.6.0)" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="[gem] rspec-expectations (v2.6.0, /Users/vb/.rvm/gems/jruby-1.6.1/gems/rspec-expectations-2.6.0)" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="[gem] rspec-mocks (v2.6.0, /Users/vb/.rvm/gems/jruby-1.6.1/gems/rspec-mocks-2.6.0)" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="[gem] diff-lcs (v1.1.2, /Users/vb/.rvm/gems/jruby-1.6.1/gems/diff-lcs-1.1.2)" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="[gem] rspec-core (v2.6.2, /Users/vb/.rvm/gems/jruby-1.6.1/gems/rspec-core-2.6.2)" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="[gem] rspec-expectations (v2.5.0, /Users/vb/.rvm/gems/jruby-1.6.1/gems/rspec-expectations-2.5.0)" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="[gem] rspec-core (v2.5.1, /Users/vb/.rvm/gems/jruby-1.6.1/gems/rspec-core-2.5.1)" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="[gem] rspec-mocks (v2.5.0, /Users/vb/.rvm/gems/jruby-1.6.1/gems/rspec-mocks-2.5.0)" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="[gem] rspec (v2.5.0, /Users/vb/.rvm/gems/jruby-1.6.1/gems/rspec-2.5.0)" level="application" />
   </component>
 </module>
 

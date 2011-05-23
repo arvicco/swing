@@ -1,9 +1,9 @@
-require 'swing'
 require 'pathname'
-
 require 'bundler'
 Bundler.setup
 Bundler.require :test
+
+require 'swing'
 
 BASE_PATH = Pathname.new(__FILE__).dirname + '..'
 
@@ -15,7 +15,3 @@ RSpec.configure do |config|
   # config.mock_with :flexmock
   # config.mock_with :rr
 end
-
-module SwingTest
-
-end # module SwingTest

@@ -64,7 +64,7 @@ module AttrSetter
                else # Return either non-nil value or default
                  value.nil? ? default : value
                end
-      [name, result] if result
+      [name, result] unless result.nil?
     end.compact
     yield opts if block_given?
     attributes.each { |(name, value)| send "#{name}=", *value }
