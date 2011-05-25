@@ -1,6 +1,6 @@
 require 'swing'
 
-module Swing::JLabel
+class Swing::JLabel
 
 end # class Label
 

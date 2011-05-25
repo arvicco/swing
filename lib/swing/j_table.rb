@@ -1,6 +1,6 @@
 require 'swing'
 
-module Swing::JTable
+class Swing::JTable
 
   #    autoCreateColumnsFromModel boolean • • false
   #    autoResizeMode             int • • AUTO_RESIZE_ALL_COLUMNS

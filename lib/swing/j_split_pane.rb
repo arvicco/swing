@@ -1,6 +1,6 @@
 require 'swing'
 
-module Swing::JSplitPane
+class Swing::JSplitPane
 
   attr_setter :one_touch_expandable, :orientation, :continuous_layout,
               :divider_size, :divider_location, :resize_weight

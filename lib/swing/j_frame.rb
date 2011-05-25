@@ -1,6 +1,6 @@
 require 'swing'
 
-module Swing::JFrame
+class Swing::JFrame
 #    include AttrSetter
 
   attr_setter :layout, :background, :size, :title,

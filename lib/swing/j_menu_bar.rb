@@ -2,7 +2,7 @@ require 'swing'
 require 'swing/j_menu'
 require 'swing/j_menu_item'
 
-module Swing::JMenuBar
+class Swing::JMenuBar
 
   def initialize opts = {}
     super opts

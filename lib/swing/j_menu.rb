@@ -1,5 +1,5 @@
 require 'swing'
 
-module Swing::JMenu
+class Swing::JMenu
 
 end

@@ -1,6 +1,6 @@
 require 'swing'
 
-module Swing::JList
+class Swing::JList
 
 end # class List
 

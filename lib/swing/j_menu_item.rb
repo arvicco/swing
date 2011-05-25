@@ -1,6 +1,6 @@
 require 'swing'
 
-module Swing::JMenuItem
+class Swing::JMenuItem
 
   def initialize text, opts = {}, &block
     super text

@@ -1,6 +1,6 @@
 require 'swing'
 
-module Swing::JCheckBox
+class Swing::JCheckBox
 
   attr_setter :selected
 
