@@ -1,10 +1,9 @@
+require 'swing'
 require 'swing/action_listener'
-require 'swing/attr_setter'
 
 module Swing
 
-  class Button < javax.swing.JButton
-    include AttrSetter
+  class JButton
 
     attr_setter :enabled
 

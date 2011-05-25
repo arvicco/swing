@@ -1,6 +1,6 @@
-include Java
+require 'swing_support/extensions'
 
-module Swing
+module SwingSupport
   # Class that implements ActionListener interface around a given block
   class ActionListener
     java_implements java.awt.event.ActionListener

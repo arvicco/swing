@@ -1,9 +1,8 @@
+require 'swing'
 require 'swing/action_listener'
-require 'swing/attr_setter'
 
 module Swing
   class CheckBox < javax.swing.JCheckBox
-    include AttrSetter
 
     attr_setter :selected
 

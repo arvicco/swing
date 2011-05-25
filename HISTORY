@@ -21,3 +21,7 @@
 == 0.0.5 / 2011-05-24
 
 * Ignoring IDEA module info
+
+== 0.1.0 / 2011-05-25
+
+* API changed to conform to original Swing classes

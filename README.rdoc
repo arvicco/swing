@@ -4,18 +4,29 @@ url: http://github.com/arvicco/swing
 
 == DESCRIPTION:
 
-Straightforward wrappers for javax.swing Components that simplify Swing code in
-JRuby-based GUI applications.
+Straightforward wrappers for javax.swing Components that simplify Swing code in JRuby-based GUI applications.
 
-== FEATURES/PROBLEMS:
+== PROBLEMS:
 
-* Library defines Ruby wrapper classes for Swing components that do NOT shadow original
-  javax.swing classes. So, javax.swing.JButton class is wrapped by Swing::Button class,
-  and you need to <b> require 'swing/button' </b> to use it.
-* Ruby wrappers define properties that are settable in constructor options, as well
-  as (optional) defaults for them that may be different from swing's original defaults:
-  Swing::Button.new 'Title', :enabled => false
-*
+This code is NOT production-ready! For production-ready code, try something like Rubeus:
+[https://github.com/akm/rubeus]. Personally, I've tried to use Rubeus and its auto-magic
+worked great for some use-cases, but I had problems extending its code when I needed to
+change default Rubeus behavior. For the life of me, I cannot figure out where all this
+Rubeus magic happens and how to change ANYTHING without the whole stage with smoke and
+mirrors falling down on me.
+
+Maybe it's just me - but I'm uncomfortable with complicated code and prefer much more
+straightforward solutions. So, I intend this lib to be straightforward - even at the
+expense of performance.
+
+== FEATURES:
+
+Library adds extended functionality to original javax.swing classes, such as:
+* Ability to set attributes via constructor options:
+  Swing::JButton.new 'Title', :enabled => false
+* Ability to define settable attributes/properties via attr_setter class macro,
+  as well as (optional) defaults for them that may be different from Swing's original defaults
+* Auto adding component to parent if ops[:parent] is given to initializer
 
 == SYNOPSIS:
 

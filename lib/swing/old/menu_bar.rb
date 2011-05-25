@@ -25,8 +25,12 @@ module Swing
           end
         end
       end
-      opts[:parent].setJMenuBar self if opts[:parent]
     end
+  end
+
+  # Post-processing (non-setter) options given to initialize
+  def self.add_component component, parent
+    parent.setJMenuBar component if parent
   end
 
 end

@@ -1,4 +1,4 @@
 # Swing-based GUI controls
-require 'swing/label'
-require 'swing/button'
-require 'swing/check_box'
+require 'swing/j_label'
+require 'swing/j_button'
+require 'swing/j_check_box'
