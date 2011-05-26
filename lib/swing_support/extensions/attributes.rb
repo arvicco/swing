@@ -14,6 +14,16 @@ module SwingSupport
         end
       end
 
+      # Post-processing (non-setter) options given to initialize
+      def post_process opts
+        attach_to opts[:parent]
+      end
+
+      # Proper way to add generic component to its parent
+      def attach_to parent
+        parent.add self if parent
+      end
+
       module ClassMethods
         def attributes
           @attributes ||= (superclass.attributes.dup rescue {})
@@ -51,18 +61,8 @@ module SwingSupport
           attributes.each { |(name, value)| component.send "#{name}=", *value }
 
           # Post-process non-setter opts (setter opts are already consumed by now)
-          post_process component, opts
+          component.post_process opts
           component
-        end
-
-        # Post-processing (non-setter) options given to initialize
-        def post_process component, opts
-          add_component component, opts[:parent]
-        end
-
-        # Proper way to add this component to its parent
-        def add_component component, parent
-          parent.add component if parent
         end
       end
     end

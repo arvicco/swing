@@ -1,9 +1,5 @@
 shared_examples_for 'enhanced awt component' do
 
-  def should_be_all_set component, attributes
-
-  end
-
   after(:each) { @component.dispose if @component.respond_to? :dispose }
 
   context 'new with common options' do

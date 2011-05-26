@@ -20,6 +20,6 @@ pkg
 log
 .iml
 .idea
-.bundle
+*.bundle
 
 ## PROJECT::SPECIFIC
