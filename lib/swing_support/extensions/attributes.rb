@@ -8,7 +8,7 @@ module SwingSupport
       def self.included host
         host.send :extend, ClassMethods
         host.instance_eval do
-          attr_setter :font, :tool_tip_text, :enabled
+#          attr_setter :font, :tool_tip_text, :enabled
           alias :new_without_attributes :new
           alias :new :new_with_attributes
         end

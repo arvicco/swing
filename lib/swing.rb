@@ -7,8 +7,21 @@ require 'version'
 require 'swing_support'
 require 'awt'
 
-#
+require 'swing/j_button'
+require 'swing/j_check_box'
+require 'swing/j_frame'
+require 'swing/j_label'
+require 'swing/j_list'
+require 'swing/j_menu'
+require 'swing/j_menu_bar'
+require 'swing/j_menu_item'
+require 'swing/j_panel'
+require 'swing/j_scroll_pane'
+require 'swing/j_split_pane'
+require 'swing/j_table'
+
 #module Swing
+#  TODO: Impossible to auto-load, this is Swing package, not a Ruby module :(
 #  autoload :JButton, "swing/j_button"
 #  autoload :JCheckBox, "swing/j_check_box"
 #  autoload :JButton, "swing/j_button"

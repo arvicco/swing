@@ -4,6 +4,8 @@ require 'swing/j_menu_item'
 
 class Swing::JMenuBar
 
+  attr_setter :tool_tip_text
+
   def initialize opts = {}
     super opts
 

@@ -2,7 +2,7 @@ require 'swing'
 
 class Swing::JButton
 
-  attr_setter :enabled
+  attr_setter :tool_tip_text
 
   def initialize *args, &block
     super *args

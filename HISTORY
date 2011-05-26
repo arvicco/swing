@@ -33,3 +33,7 @@
 == 0.1.2 / 2011-05-25
 
 * JFrame fixed
+
+== 0.1.3 / 2011-05-26
+
+* Upgrade Awt::Component

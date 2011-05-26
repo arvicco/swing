@@ -37,6 +37,7 @@ class Swing::JTable
   #    scrollableTracksViewportHeighto boolean • false
   #    scrollableTracksViewportWidtho boolean • false
 
+  attr_setter :tool_tip_text
   attr_setter :auto_create_columns_from_model, :auto_resize_mode, :row_height,
               :model, :column_model, :selection_model,
               :drag_enabled, :cell_editor, :grid_color, :intercell_spacing,
