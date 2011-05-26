@@ -1,10 +1,10 @@
 require 'spec_helper'
 require 'swing/shared'
 
-describe Swing::JLabel do
+describe Swing::JList do
 
   context 'creation' do
-    let(:new_args) { ['Text'] }
+    let(:new_args) { [] }
 
     it_behaves_like 'enhanced awt component'
     it_behaves_like 'tool tipped component'

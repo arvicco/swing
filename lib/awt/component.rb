@@ -16,7 +16,6 @@ class Awt::Component
   #    layout           LayoutManager • • BorderLayout( )
   #    locale           Locale • •
   #    location         Point • •
-  #    locationOnScreen Point • •
   #    name             String • • ""
   #    parent           Container • • null
   #    size             Dimension • •
@@ -27,9 +26,10 @@ class Awt::Component
   #    componentCount   int •
   #    components       Component[] •
   #    insets           Insets • Insets(0,0,0,0)
+  #    locationOnScreen Point • •
   #    showing          boolean • true
   #    valid            boolean •
 
-  attr_setter :background, :cursor, :enabled, :font, :foreground, :layout, :locale,
-              :location, :location_on_screen, :name, :parent, :size, :visible
+  attr_setter :background, :cursor, :enabled, :font, :foreground, :layout,
+              :locale, :location, :name, :size, :visible
 end

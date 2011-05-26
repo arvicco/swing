@@ -50,12 +50,17 @@ module SwingSupport
           #      yield opts if block_given?
           attributes.each { |(name, value)| component.send "#{name}=", *value }
 
-          # Post-process non-setter opts
-          add_component component, opts[:parent]
+          # Post-process non-setter opts (setter opts are already consumed by now)
+          post_process component, opts
           component
         end
 
         # Post-processing (non-setter) options given to initialize
+        def post_process component, opts
+          add_component component, opts[:parent]
+        end
+
+        # Proper way to add this component to its parent
         def add_component component, parent
           parent.add component if parent
         end

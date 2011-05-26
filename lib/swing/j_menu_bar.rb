@@ -6,9 +6,9 @@ class Swing::JMenuBar
 
   attr_setter :tool_tip_text
 
-  def initialize opts = {}
-    super opts
-
+  # Override post-processing (non-setter) options given to initialize
+  def self.post_process component, opts
+    # Create menu structure from :structure opt
     if opts[:structure]
       [opts[:structure]].flatten.each do |element|
         case element
@@ -20,15 +20,17 @@ class Swing::JMenuBar
               end
             end
           else
-            self.add element
+            component.add element
         end
       end
     end
+    add_component component, opts[:parent]
   end
 
-  # Post-processing (non-setter) options given to initialize
+  # Proper way to add menu bar to its parent
   def self.add_component component, parent
-    parent.setJMenuBar component if parent
+    parent.setJMenuBar component if parent and parent.respond_to? :setJMenuBar
   end
+
 
 end
