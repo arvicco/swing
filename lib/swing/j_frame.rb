@@ -5,14 +5,14 @@ class Swing::JFrame
   attr_setter :layout, :background, :size, :title,
               :default_close_operation => EXIT_ON_CLOSE #DISPOSE_ON_CLOSE, HIDE_ON_CLOSE
 
-  def attributes
-    a = super
-    a.delete :tool_tip_text
-    a
-  end
+#  def attributes
+#    a = super
+#    a.delete :tool_tip_text
+#    a
+#  end
 
   def initialize *args
-
+    p args
     super *args
 
     setup
