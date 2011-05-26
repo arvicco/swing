@@ -3,16 +3,13 @@ require 'awt/component'
 
 describe 'java.awt.Component' do
   context 'defining new methods' do
-    it 'changes derived Ruby subclases' do
-      button = Swing::JButton.new 'Disconnect'
-      button.should respond_to :blah
-      button.blah
-    end
+    [Swing::JButton, javax.swing.JButton, Swing::JLabel, Swing::Box].each do |klass|
 
-    it 'changes derived pure Java subclases' do
-      button = javax.swing.JButton.new 'Disconnect'
-      button.should respond_to :blah
-      button.blah
+      it "changes derived subclases #{klass}" do
+        component = klass == Swing::Box ? klass.new(1) : klass.new('Test')
+        component.should respond_to :attach_to
+        component.should respond_to :post_process
+      end
     end
   end
 

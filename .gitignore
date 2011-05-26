@@ -13,13 +13,15 @@ tmtags
 ## VIM
 *.swp
 
+## IDEA
+*.iml
+.idea
+
 ## PROJECT::GENERAL
 coverage
 rdoc
 pkg
 log
-.iml
-.idea
-*.bundle
+.bundle
 
 ## PROJECT::SPECIFIC
