@@ -21,7 +21,8 @@ require 'swing/j_scroll_pane'
 require 'swing/j_split_pane'
 require 'swing/j_table'
 
-#module Swing
+module Swing
+  Table = table
 #  TODO: Impossible to auto-load, this is Swing package, not a Ruby module :(
 #  autoload :JButton, "swing/j_button"
 #  autoload :JCheckBox, "swing/j_check_box"
@@ -33,4 +34,4 @@ require 'swing/j_table'
 #  autoload :Jdbc, "rubeus/jdbc"
 #  autoload :Reflection, "rubeus/reflection"
 #  autoload :Util, "rubeus/util"
-#end  # module Swing
+end  # module Swing

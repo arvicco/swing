@@ -70,7 +70,7 @@ module SwingSupport
             elsif component.respond_to? "set_#{name}"
               component.send "set_#{name}", *value
             else
-              raise "Setter #{name} does not work for #{component}"
+              raise ArgumentError.new "Setter #{name} does not work for #{component}"
             end
           end
 

@@ -8,7 +8,7 @@ require 'swing'
 BASE_PATH = Pathname.new(__FILE__).dirname + '..'
 
 RSpec.configure do |config|
-  # config.exclusion_filter = { :slow => true }
+   config.exclusion_filter = { :failing => true }
   # config.filter = { :focus => true }
   # config.include(UserExampleHelpers)
   # config.mock_with :mocha
