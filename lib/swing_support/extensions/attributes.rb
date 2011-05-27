@@ -44,7 +44,7 @@ module SwingSupport
         # Sets attributes after calling original new
         def new_with_attributes(*args, &block)
           opts = args.last.is_a?(Hash) ? args.pop.dup : {}
-          component = self.new_without_attributes(*args, &block)
+          component = self.new_without_attributes(*args) #, &block)
 
           # Extract known attributes given in opts,
           # run default actions on them, or return known defaults
@@ -62,8 +62,6 @@ module SwingSupport
             [name, result] unless result.nil?
           end.compact
 
-          #      yield opts if block_given?
-
           attributes.each do |(name, value)|
             if component.respond_to? "#{name}="
               component.send "#{name}=", *value
@@ -79,6 +77,9 @@ module SwingSupport
 
           # Raises exception if any of the given options left unprocessed
           raise "Unrecognized options: #{opts}" unless opts.empty?
+
+          yield component if block_given?
+
           component
         end
       end
