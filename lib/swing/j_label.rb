@@ -2,7 +2,7 @@ require 'swing'
 
 class Swing::JLabel
 
-  # SwingConstants.XYZ or JLabel.XYZ for constants...
+  # Use either Swing::SwingConstants::XYZ or Swing::JLabel::XYZ for constants...
   #    UI                     LabelUI • • From L&F
   #    disabledIcon           Icon • • null
   #    displayedMnemonic      int/char • • KeyEvent.VK_UNDEFINED - both int and char setters

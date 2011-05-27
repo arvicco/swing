@@ -69,3 +69,7 @@
 == 0.1.11 / 2011-05-27
 
 * JLabel attributes specified
+
+== 0.1.12 / 2011-05-27
+
+* Default classes for some Awt::Component property setters

@@ -17,13 +17,13 @@ describe Swing::JLabel do
           :disabled_icon => disabled_icon,
           :displayed_mnemonic => 39,
           :displayed_mnemonic_index => -1,
-          :horizontal_alignment => Swing::JLabel::RIGHT,
+          :horizontal_alignment => Swing::SwingConstants::RIGHT,
           :horizontal_text_position => Swing::JLabel::RIGHT,
           :icon => icon,
           :icon_text_gap => 13,
           :label_for => field,
           :text => 'Bleh',
-          :vertical_alignment => Swing::JLabel::TOP,
+          :vertical_alignment => Swing::SwingConstants::TOP,
           :vertical_text_position => Swing::JLabel::TOP
       }
       @label = described_class.new *(new_args.push properties)

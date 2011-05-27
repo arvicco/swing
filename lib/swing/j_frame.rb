@@ -2,8 +2,7 @@ require 'swing'
 
 class Swing::JFrame
 
-  attr_setter :layout, :background, :size, :title,
-              :default_close_operation => EXIT_ON_CLOSE #DISPOSE_ON_CLOSE, HIDE_ON_CLOSE
+  attr_setter :title, :default_close_operation => EXIT_ON_CLOSE #DISPOSE_ON_CLOSE, HIDE_ON_CLOSE
 
   def initialize *args, &block
     super *args, &nil

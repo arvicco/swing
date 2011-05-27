@@ -35,7 +35,6 @@ describe Swing::JTable do
       @table = described_class.new *(new_args.push properties)
 #      p @table.methods.sort.grep /election/
       properties.each do |name, value|
-        p name, value
         @table.send(name).should == value
       end
     end

@@ -26,6 +26,8 @@ class Awt::Component
   #    showing          boolean • true
   #    valid            boolean •
 
-  attr_setter :background, :cursor, :enabled, :font, :foreground, :layout,
-              :locale, :location, :name, :size, :visible
+  attr_setter :enabled, :layout,
+              :locale, :location, :name, :size, :visible,
+              :background => Awt::Color, :foreground => Awt::Color,
+              :font => Awt::Font, :cursor => Awt::Cursor
 end

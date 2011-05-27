@@ -32,6 +32,21 @@ shared_examples_for 'enhanced Awt::Component' do
     end
   end
 
+  it 'even auto-creates proper classes for given properties' do
+    properties = {
+        :background => [1, 2, 3],
+        :foreground => [3, 2, 1],
+        :font => ["Trebuchet", Awt::Font::PLAIN, 11],
+        :locale => locale,
+        :location => [100, 200],
+        :size => [300, 300],
+    }
+    @component = described_class.new *(args.push properties)
+    @component.background.should == Awt::Color.new(1, 2, 3)
+    @component.foreground.should == Awt::Color.new(3, 2, 1)
+    @component.font.should == Awt::Font.new("Trebuchet", Awt::Font::PLAIN, 11)
+  end
+
   context 'new with parent' do
     unless described_class == Swing::JFrame || described_class == Swing::JMenuBar
       it 'sets parent via options' do
