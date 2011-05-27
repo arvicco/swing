@@ -11,6 +11,7 @@ class Swing::JFrame
     # Yielding self to set up contents before making frame visible
     yield self if block_given?
 
+    self.pack
     self.location_relative_to = nil
     self.visible = true
   end

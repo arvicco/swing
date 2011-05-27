@@ -1,17 +1,14 @@
 require 'swing'
-require 'swing/j_menu'
-require 'swing/j_menu_item'
 
 class Swing::JMenuBar
-
-  attr_setter :tool_tip_text
 
   # Override post-processing (non-setter) options given to initialize
   def post_process opts
     super
     # Create menu structure from :structure opt
-    if opts[:structure]
-      [opts[:structure]].flatten.each do |element|
+    structure = opts.delete :structure
+    if structure
+      [structure].flatten.each do |element|
         case element
           when Hash # Hash defines menu structure
             element.each do |menu_name, menu_structure|

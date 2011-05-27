@@ -7,6 +7,7 @@ require 'version'
 require 'swing_support'
 require 'awt'
 
+require 'swing/j_component'
 require 'swing/j_button'
 require 'swing/j_check_box'
 require 'swing/j_frame'

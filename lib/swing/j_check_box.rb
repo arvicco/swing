@@ -3,7 +3,6 @@ require 'swing'
 class Swing::JCheckBox
 
   attr_setter :selected
-  attr_setter :tool_tip_text
 
   def initialize *args, &block
     super *args

@@ -57,3 +57,7 @@
 == 0.1.8 / 2011-05-27
 
 * Frame deals with blocks
+
+== 0.1.9 / 2011-05-27
+
+* JComponent attribute setters added

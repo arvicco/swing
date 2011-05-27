@@ -37,14 +37,13 @@ class Swing::JTable
   #    scrollableTracksViewportHeighto boolean • false
   #    scrollableTracksViewportWidtho boolean • false
 
-  attr_setter :tool_tip_text
   attr_setter :auto_create_columns_from_model, :auto_resize_mode, :row_height,
               :model, :column_model, :selection_model,
               :drag_enabled, :cell_editor, :grid_color, :intercell_spacing,
               :preferred_scrollable_viewport_size, :row_margin,
               :selection_background, :selection_foreground, :show_grid,
               :show_horizontal_lines, :show_vertical_lines, :table_header,
-              :selection_mode => javax.swing.ListSelectionModel::SINGLE_SELECTION,
+              :selection_mode => Swing::ListSelectionModel::SINGLE_SELECTION,
               :cell_selection_enabled => true,
               :row_selection_allowed => false,
               :column_selection_allowed => false

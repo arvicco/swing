@@ -15,8 +15,9 @@ module SwingSupport
       end
 
       # Post-processing (non-setter) options given to initialize
+      # You need to delete processed/consumed options from given Hash
       def post_process opts
-        attach_to opts[:parent]
+        attach_to opts.delete(:parent)
       end
 
       # Proper way to add generic component to its parent
@@ -42,26 +43,42 @@ module SwingSupport
 
         # Sets attributes after calling original new
         def new_with_attributes(*args, &block)
-          opts = args.last.is_a?(Hash) ? args.pop : {}
+          opts = args.last.is_a?(Hash) ? args.pop.dup : {}
           component = self.new_without_attributes(*args, &block)
 
-          # Extract known attributes given in opts, or known defaults
+          # Extract known attributes given in opts,
+          # run default actions on them, or return known defaults
           attributes = attributes().map do |name, default|
             value = opts.delete name
-            result = if default.nil? # No default, return whatever value
+            result = if default.nil? # No default, use value directly
                        value
                      elsif default.respond_to? :call # Default is callable, call it with whatever value
                        default.call *value
+                     elsif default.is_a?(Class) && value.class != default # Default class of this attribute, create new
+                       default.new *value unless value.nil?
                      else # Return either non-nil value or default
                        value.nil? ? default : value
                      end
             [name, result] unless result.nil?
           end.compact
+
           #      yield opts if block_given?
-          attributes.each { |(name, value)| component.send "#{name}=", *value }
+
+          attributes.each do |(name, value)|
+            if component.respond_to? "#{name}="
+              component.send "#{name}=", *value
+            elsif component.respond_to? "set_#{name}"
+              component.send "set_#{name}", *value
+            else
+              raise "Setter #{name} does not work for #{component}"
+            end
+          end
 
           # Post-process non-setter opts (setter opts are already consumed by now)
           component.post_process opts
+
+          # Raises exception if any of the given options left unprocessed
+          raise "Unrecognized options: #{opts}" unless opts.empty?
           component
         end
       end

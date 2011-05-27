@@ -7,7 +7,7 @@ describe Swing::JFrame do
     after(:each) { @frame.dispose if @frame }
     let(:new_args) { ['Frame'] }
 
-    it_behaves_like 'enhanced awt component'
+    it_behaves_like 'enhanced Awt::Component'
 
     it 'is possible to create Frame with options' do
       @frame = Swing::JFrame.new "Option frame",
