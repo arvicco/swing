@@ -2,8 +2,7 @@ require 'swing'
 
 class Swing::JMenuItem
 
-  def initialize text, &block
-    super text
+  def add_block_listener &block
     self.addActionListener SwingSupport::ActionListener.new &block
   end
 

@@ -9,5 +9,13 @@ describe Swing::JMenuItem do
     it_behaves_like 'enhanced Awt::Component'
     it_behaves_like 'enhanced Swing::JComponent'
 
+    it 'accepts action listener block' do
+      item = Swing::JMenuItem.new('Test') { @block_called = true}
+      @block_called.should be_false
+
+      item.do_click
+      @block_called.should be_true
+    end
+
   end
 end

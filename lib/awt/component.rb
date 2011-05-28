@@ -1,8 +1,10 @@
 require 'swing_support/extensions/attributes'
+require 'swing_support/extensions/blocks'
 
 class Awt::Component
 
   include SwingSupport::Extensions::Attributes
+  include SwingSupport::Extensions::Blocks
 
   #    background       Color • •
   #    cursor           Cursor • • Cursor.DEFAULT_CURSOR

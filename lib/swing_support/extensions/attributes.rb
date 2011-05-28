@@ -1,5 +1,3 @@
-import java.awt.Dimension
-
 module SwingSupport
   module Extensions
     # Module allows including classes to receive attribute values in an *opts* Hash
@@ -44,7 +42,7 @@ module SwingSupport
         # Sets attributes after calling original new
         def new_with_attributes(*args, &block)
           opts = args.last.is_a?(Hash) ? args.pop.dup : {}
-          component = self.new_without_attributes(*args) #, &block)
+          component = self.new_without_attributes(*args, &block)
 
           # Extract known attributes given in opts,
           # run default actions on them, or return known defaults
@@ -77,8 +75,6 @@ module SwingSupport
 
           # Raises exception if any of the given options left unprocessed
           raise "Unrecognized options: #{opts}" unless opts.empty?
-
-          yield component if block_given?
 
           component
         end

@@ -77,3 +77,7 @@
 == 0.1.14 / 2011-05-28
 
 * Block given to JComponent constructor is now yielded to
+
+== 0.1.15 / 2011-05-28
+
+* Blocks given to constructor processed
