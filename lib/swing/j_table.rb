@@ -51,4 +51,6 @@ class Swing::JTable
               :row_selection_allowed => false,
               :column_selection_allowed => false
 
+  # TODO: direct accessors for column_model properties like #columns?
+
 end # class JTable

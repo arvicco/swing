@@ -81,3 +81,7 @@
 == 0.1.15 / 2011-05-28
 
 * Blocks given to constructor processed
+
+== 0.1.16 / 2011-06-16
+
+* JTextField can be now created with action listener block

@@ -20,6 +20,7 @@ require 'swing/j_panel'
 require 'swing/j_scroll_pane'
 require 'swing/j_split_pane'
 require 'swing/j_table'
+require 'swing/j_text_field'
 
 module Swing
   Table = table

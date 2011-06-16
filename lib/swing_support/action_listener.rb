@@ -6,13 +6,13 @@ module SwingSupport
     java_implements java.awt.event.ActionListener
 
     def initialize &block
-      @action_block = block
+      @listener_block = block
     end
 
     java_signature 'public void actionPerformed(ActionEvent event)'
     # from ActionListener interface: Invoked when an action event occurs.
     def actionPerformed event
-      @action_block.call event
+      @listener_block.call event
     end
   end
 end
